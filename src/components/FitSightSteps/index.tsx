@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Radio, Button, Upload, message } from 'antd';
-import type { UploadFile } from 'antd';
+import type { UploadFile, UploadChangeParam } from 'antd/es/upload';
 import Home from '../../pages/Home';
 
 const FitSightSteps: React.FC = () => {
@@ -14,7 +14,6 @@ const FitSightSteps: React.FC = () => {
   const totalSteps = 4;
 
   const next = () => {
-    // Validate từng bước
     if (currentStep === 1 && !gender) {
       message.error('Vui lòng chọn giới tính trước khi tiếp tục.');
       return;
@@ -46,9 +45,9 @@ const FitSightSteps: React.FC = () => {
       if (!isImage) {
         message.error('Chỉ cho phép tải lên file ảnh!');
       }
-      return false;
+      return false; // Prevent automatic upload
     },
-    onChange: (info: any) => {
+    onChange: (info: UploadChangeParam<UploadFile>) => {
       setUploadedImages(info.fileList);
     },
     fileList: uploadedImages,
