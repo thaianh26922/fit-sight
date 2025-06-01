@@ -1,7 +1,8 @@
 import React from 'react'
 import { Row, Col, Form, Input, Button, Typography } from 'antd'
 
-const { Link, Text } = Typography
+const { Text } = Typography
+import { Link } from 'react-router-dom'
 
 const Login: React.FC = () => {
   const [form] = Form.useForm()
@@ -62,10 +63,10 @@ const Login: React.FC = () => {
           </Form.Item>
 
           <Row justify="space-between" style={{ marginBottom: 16 }}>
-            <Link href="/forgot-password" style={{ color: '#34c759' }}>
+            <Link to="/forgot-password" style={{ color: '#34c759' }}>
               Quên mật khẩu?
             </Link>
-            <Link href="/register" style={{ color: '#34c759' }}>
+            <Link to="/employee" style={{ color: '#34c759' }}>
               Đăng ký tài khoản
             </Link>
           </Row>
@@ -74,11 +75,11 @@ const Login: React.FC = () => {
         <Row justify="center" style={{ marginTop: 24 }}>
           <Text type="secondary" style={{ fontSize: 12, textAlign: 'center' }}>
             Bằng cách đăng nhập, bạn đồng ý với{' '}
-            <Link href="/terms" target="_blank" style={{ color: '#34c759' }}>
+            <Link to="/terms" target="_blank" style={{ color: '#34c759' }}>
               Điều khoản dịch vụ
             </Link>{' '}
             và{' '}
-            <Link href="/privacy" target="_blank" style={{ color: '#34c759' }}>
+            <Link to="/privacy" target="_blank" style={{ color: '#34c759' }}>
               Chính sách bảo mật
             </Link>
             .
