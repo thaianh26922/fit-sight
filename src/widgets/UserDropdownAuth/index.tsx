@@ -2,12 +2,13 @@ import { UserOutlined } from '@ant-design/icons'
 import { Avatar, Dropdown, Flex, Row, Space, Typography } from 'antd'
 import type { MenuProps } from 'antd'
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint'
+import { useNavigate } from 'react-router-dom'
 
 const { Text } = Typography
 
 function UserDropdownAuth() {
   const screens = useBreakpoint()
-
+  const navigate = useNavigate()
   // Mock user info
   const user = {
     profile: { fullName: 'Nguyễn Văn A' },
@@ -26,9 +27,9 @@ function UserDropdownAuth() {
     },
     {
       key: '2',
-      label: (
+      label: ( 
         <Space size={10} align="center">
-          <Text type="secondary">Logout</Text>
+          <Text type="secondary" onClick={()=> navigate('/login')}>Logout</Text>
         </Space>
       ),
     },
