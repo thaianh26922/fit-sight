@@ -1,6 +1,6 @@
 // src/components/BodyModel.tsx
-import React, { Suspense } from 'react';
-import { Canvas, useLoader } from '@react-three/fiber';
+import { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei';
 
 const BodyModel = () => {

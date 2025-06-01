@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Card, Table, Typography, Space, Button } from 'antd'
+import { Row, Col, Card, Table } from 'antd'
 import {
   RadarChart,
   PolarGrid,
@@ -17,11 +17,8 @@ import 'react-image-gallery/styles/css/image-gallery.css'
 import BodyModel from '../../components/BodyModel'
 import PageHeader from '../../widgets/LazyLoading/PageHeader'
 
-const { Title } = Typography
 import { DatePicker } from 'antd';
-import type { DatePickerProps, GetProps } from 'antd';
 
-type RangePickerProps = GetProps<typeof DatePicker.RangePicker>;
 
 const { RangePicker } = DatePicker;
 

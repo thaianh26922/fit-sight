@@ -10,7 +10,6 @@ import {
   Badge,
   Button,
   Card,
-  ConfigProvider,
   Dropdown,
   Flex,
   Layout,
@@ -34,7 +33,7 @@ export default function LayoutApp({ children }: ILayoutApp) {
 
   const navigate = useNavigate();
 
-  const colorBgContainer = "white";
+  const colorBgContainer = "white ";
   const borderRadiusLG = 8;
 
   const menuKeyToPath: Record<string, string> = {

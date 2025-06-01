@@ -1,8 +1,6 @@
-import lazyLoading from '@components/widgets/LazyLoading'
 import { match } from 'path-to-regexp'
 import React from 'react'
 import type { PathRouteProps } from 'react-router-dom'
-import Home from '../pages/Home'
 import Profile from '../pages/Profile'
 import FitSightSteps from '../components/FitSightSteps'
 // import { PathRouteProps } from 'react-router-dom'
