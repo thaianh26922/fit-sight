@@ -68,9 +68,9 @@ const Profile: React.FC = () => {
                   <RangePicker
                     showTime={{ format: 'HH:mm' }}
                     format="YYYY-MM-DD HH:mm"
-                  />                
-                  </Col>
-                
+                  />
+                </Col>
+
               </Row>
             }
           />
@@ -99,8 +99,8 @@ const Profile: React.FC = () => {
                   outerRadius={100}
                   label
                 >
-                  {pieData.map((entry, index) => (
-                    <Cell key={index} fill={COLORS[index]} />
+                  {pieData.map((_, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
                 <Tooltip />
